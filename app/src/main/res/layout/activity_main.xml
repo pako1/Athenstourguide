@@ -12,7 +12,7 @@
         style="@style/CategoryTab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabMaxWidth="0dp"
+        app:tabMaxWidth="@dimen/zer"
         app:tabMode="fixed" />
 
     <android.support.v4.view.ViewPager
