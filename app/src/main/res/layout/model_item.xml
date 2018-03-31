@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/ListItem"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/tan_background"
+    android:padding="10dp">
 
     <ImageView
         android:id="@+id/modelImage"
         android:layout_width="match_parent"
         android:layout_height="260dp"
-        android:src="@drawable/aleria" />
+        android:contentDescription="@string/content_image" />
 
     <TextView
         android:id="@+id/nameView"
@@ -17,12 +19,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Aleria"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/modelImage" />
-
 
     <TextView
         android:id="@+id/explanationView"
@@ -32,11 +32,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="dadasdasdadada"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameView" />
-
 
     <ImageView
         android:id="@+id/phone_icon"
@@ -44,6 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="@string/phone_number_image"
         android:src="@drawable/ic_smartphone_black_24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/explanationView" />
@@ -54,7 +53,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="dadasdada"
         app:layout_constraintStart_toEndOf="@+id/phone_icon"
         app:layout_constraintTop_toBottomOf="@+id/explanationView" />
 
@@ -64,6 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="@string/schedule_of_shop"
         android:src="@drawable/ic_access_time_black_24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phone_icon" />
@@ -74,10 +73,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="dasdasda"
         app:layout_constraintStart_toEndOf="@+id/timeView"
         app:layout_constraintTop_toBottomOf="@+id/phone_numberView" />
-
 
     <ImageView
         android:id="@+id/price"
@@ -85,18 +82,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="@string/price_icon"
         android:src="@drawable/ic_attach_money_black_24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timeView" />
-
 
     <TextView
         android:id="@+id/moneyView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="14dp"
-        android:text="$$$"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toEndOf="@+id/price"
         app:layout_constraintTop_toBottomOf="@+id/scheduleView" />
 
@@ -106,6 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="@string/location_icon"
         android:src="@drawable/ic_location_on_black_24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/price" />
@@ -116,9 +113,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="14dp"
-        android:text="asdadadada"
         app:layout_constraintStart_toEndOf="@+id/location_icon"
         app:layout_constraintTop_toBottomOf="@+id/moneyView" />
-
 
 </android.support.constraint.ConstraintLayout>

@@ -11,8 +11,16 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 
 public class FoodFragment extends Fragment {
+
+    @BindView(R.id.modelList)
+    ListView listView;
+
+    View rootView;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -20,17 +28,24 @@ public class FoodFragment extends Fragment {
 
         ArrayList<Model> foodList = new ArrayList<>();
 
-        foodList.add(new Model(R.drawable.aleria, "aleria", "Megalou Alexandrou 57", "+30 21 0522 2633", "10:00-22:00", "€€€€", "HI gihihaihiihihif"));
-        foodList.add(new Model(R.drawable.aleria, "aleria", "Megalou Alexandrou 57", "+30 21 0522 2633", "10:00-22:00", "€€€€", "HI gihihaihiihihif"));
+        foodList.add(new Model(R.drawable.aleria, getString(R.string.aleria), getString(R.string.aleradd), getString(R.string.alphone), getString(R.string.alhour), getString(R.string.alerprice), getString(R.string.aleriaexp)));
+        foodList.add(new Model(R.drawable.funky, getString(R.string.funky), getString(R.string.funkadd), getString(R.string.funk), getString(R.string.funhour), getString(R.string.funprice), getString(R.string.funkexp)));
+        foodList.add(new Model(R.drawable.oroscopo, getString(R.string.orosc), getString(R.string.orosadd), getString(R.string.orosphone), getString(R.string.orohour), getString(R.string.orosprice), getString(R.string.orscexp)));
+        foodList.add(new Model(R.drawable.hot, getString(R.string.hothot), getString(R.string.hotadd), getString(R.string.hotphone), getString(R.string.hothour), getString(R.string.hotprice), getString(R.string.hotexp)));
 
-        View rootView = inflater.inflate(R.layout.model_list, container, false);
+        rootView = inflater.inflate(R.layout.model_list, container, false);
 
-        ListView listView = rootView.findViewById(R.id.modelList);
+        ButterKnife.bind(this,rootView);
 
         ModelAdapter modelAdapter = new ModelAdapter(getActivity(), foodList);
 
         listView.setAdapter(modelAdapter);
 
         return rootView;
+    }
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        rootView = null;
     }
 }
