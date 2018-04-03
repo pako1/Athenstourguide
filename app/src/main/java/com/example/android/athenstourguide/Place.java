@@ -1,6 +1,6 @@
 package com.example.android.athenstourguide;
 
-public class Model {
+public class Place {
 
     private int mImage;
     private String mSightname;
@@ -40,7 +40,7 @@ public class Model {
 
 
 
-    Model(int mImage, String mSightname, String mAddress, String mPhone, String mSchedule, String mPrice, String mDescription) {
+    Place(int mImage, String mSightname, String mAddress, String mPhone, String mSchedule, String mPrice, String mDescription) {
         this.mImage = mImage;
         this.mSightname = mSightname;
         this.mAddress = mAddress;
@@ -50,7 +50,7 @@ public class Model {
         this.mDescription = mDescription;
     }
 
-     Model(int mImage, String mSightname, String mAddress, String mPrice, String mDescription) {
+     Place(int mImage, String mSightname, String mAddress, String mPrice, String mDescription) {
         this.mImage = mImage;
         this.mSightname = mSightname;
         this.mAddress = mAddress;

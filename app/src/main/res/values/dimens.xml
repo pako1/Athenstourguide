@@ -8,5 +8,4 @@
     <dimen name="tedp">10dp</dimen>
     <dimen name="fortedp">14dp</dimen>
     <dimen name="zer">0dp</dimen>
-    <item name="divdp" type="dimen" format="float">8.0dp</item>
 </resources>

@@ -26,20 +26,20 @@ public class FoodFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        ArrayList<Model> foodList = new ArrayList<>();
+        ArrayList<Place> foodList = new ArrayList<>();
 
-        foodList.add(new Model(R.drawable.aleria, getString(R.string.aleria), getString(R.string.aleradd), getString(R.string.alphone), getString(R.string.alhour), getString(R.string.alerprice), getString(R.string.aleriaexp)));
-        foodList.add(new Model(R.drawable.funky, getString(R.string.funky), getString(R.string.funkadd), getString(R.string.funk), getString(R.string.funhour), getString(R.string.funprice), getString(R.string.funkexp)));
-        foodList.add(new Model(R.drawable.oroscopo, getString(R.string.orosc), getString(R.string.orosadd), getString(R.string.orosphone), getString(R.string.orohour), getString(R.string.orosprice), getString(R.string.orscexp)));
-        foodList.add(new Model(R.drawable.hot, getString(R.string.hothot), getString(R.string.hotadd), getString(R.string.hotphone), getString(R.string.hothour), getString(R.string.hotprice), getString(R.string.hotexp)));
+        foodList.add(new Place(R.drawable.aleria, getString(R.string.aleria), getString(R.string.aleradd), getString(R.string.alphone), getString(R.string.alhour), getString(R.string.alerprice), getString(R.string.aleriaexp)));
+        foodList.add(new Place(R.drawable.funky, getString(R.string.funky), getString(R.string.funkadd), getString(R.string.funk), getString(R.string.funhour), getString(R.string.funprice), getString(R.string.funkexp)));
+        foodList.add(new Place(R.drawable.oroscopo, getString(R.string.orosc), getString(R.string.orosadd), getString(R.string.orosphone), getString(R.string.orohour), getString(R.string.orosprice), getString(R.string.orscexp)));
+        foodList.add(new Place(R.drawable.hot, getString(R.string.hothot), getString(R.string.hotadd), getString(R.string.hotphone), getString(R.string.hothour), getString(R.string.hotprice), getString(R.string.hotexp)));
 
         rootView = inflater.inflate(R.layout.model_list, container, false);
 
         ButterKnife.bind(this,rootView);
 
-        ModelAdapter modelAdapter = new ModelAdapter(getActivity(), foodList);
+        PlaceAdapter placeAdapter = new PlaceAdapter(getActivity(), foodList);
 
-        listView.setAdapter(modelAdapter);
+        listView.setAdapter(placeAdapter);
 
         return rootView;
     }
